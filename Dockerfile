@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.7-slim
 
 WORKDIR /app
 
@@ -6,4 +6,6 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["python","run.py"]
+ENTRYPOINT ["python"]
+
+CMD ["run.py"]
